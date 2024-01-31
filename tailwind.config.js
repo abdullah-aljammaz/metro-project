@@ -2,7 +2,11 @@
 module.exports = {
   content: [],
   theme: {
-    extend: {},
+    // Some useful comment
+    fontFamily: {
+      'Almarai': ['Almarai', 'sans-serif'], 
+      'Tajawal':['Tajawal', 'sans-serif']
+    },
   },
   plugins: [],
 
