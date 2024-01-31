@@ -44,26 +44,9 @@
   }
 }
 
-.card-main svg {
-  margin-right: 5%;
-  position: relative;
-  bottom: 19px;
-}
 
 .right-section h5 {
   text-align: center;
 }
 
 
-
-.black-dot{
-  display: inline-block;
-  width: 11px;
-  height: 11px;
-  background-color: #000;
-  border-radius: 50%;
-  margin: 0px 2.5rem;
-  position: relative;
-  top: 23px;
-  right: 35px;
-}
