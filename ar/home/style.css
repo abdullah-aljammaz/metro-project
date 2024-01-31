@@ -1,0 +1,69 @@
+:root {
+  --bg-color-card: #118011; /* Example of a CSS variable */
+  --text-color-primary: #fff;
+  --animation-duration: 5s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#slide-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  overflow-x: hidden;
+  width: 100%;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.card-main {
+  animation: moving var(--animation-duration) infinite linear;
+  position: relative;
+  left: 0;
+  /* width: 50%; */
+  color: var(--text-color-primary);
+  
+}
+
+
+
+.paused {
+  animation-play-state: paused;
+}
+
+@keyframes moving {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(600px);
+  }
+}
+
+.card-main svg {
+  margin-right: 5%;
+  position: relative;
+  bottom: 19px;
+}
+
+.right-section h5 {
+  text-align: center;
+}
+
+
+
+.black-dot{
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  background-color: #000;
+  border-radius: 50%;
+  margin: 0px 2.5rem;
+  position: relative;
+  top: 23px;
+  right: 35px;
+}

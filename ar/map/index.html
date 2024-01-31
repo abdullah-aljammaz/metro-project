@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>map</title>
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- icons -->
+    <script
+      src="https://kit.fontawesome.com/2be66cf1a8.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- font -->
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Changa:wght@500&family=El+Messiri:wght@500&family=Nunito+Sans:opsz@6..12&family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="flex flex-col min-h-screen bg-gray-100">
+    <div id="Navbar"></div>
+    <main class="flex-grow flex flex-col items-center justify-center">
+      <div class="container mx-auto p-4">
+        <img
+          src="../../images/riyadh-metro-bus-public-transport-map.png"
+          alt="Riyadh Metro Bus Public Transport Map"
+          class="rounded shadow-lg max-w-full h-auto align-middle border-none"
+        />
+      </div>
+    </main>
+    <div id="footer" class="mt-auto"></div>
+  </body>
+</html>
+
+<script>
+  fetch("../nav/index.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("Navbar").innerHTML = data;
+    });
+</script>
+<script>
+  fetch("../footer/index.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>

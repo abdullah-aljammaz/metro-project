@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/2be66cf1a8.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- font -->
+  </head>
+
+  <body class="flex flex-col min-h-screen bg-gray-100">
+    <div id="Navbar"></div>
+    <main class="flex-grow">
+      <section class="flex flex-col md:flex-row items-center justify-around">
+        <!-- Basic -->
+
+        <div
+          class="planTrips bg-[#113108] relative text-center rounded-lg shadow-2xl cursor-pointer hover:scale-110 duration-500 opacity-95 hover:opacity-100"
+        >
+          <h2 class="sizing text-[#7dfb50]">الاساسي</h2>
+          <h3 class="text-[#7dfb50]">20 ريال</h3>
+          <p class="text-[#7dfb50]">تذكرة 3 ايام</p>
+
+          <a href="" class="bg-[#113108] p-3 rounded-xl mb-4"
+            ><i class="card-icon fa-solid fa-credit-card "></i> &nbsp;الاشتراك</a
+          >
+        </div>
+
+        <!-- Platinum -->
+        <div
+          class="planTrips bg-[#6fd44f] text-center relative rounded-lg shadow-2xl cursor-pointer hover:scale-110 duration-500 opacity-95 hover:opacity-100"
+        >
+          <h4 class="relative text-[#1e1e1e] bg-[#59ac3f] rounded-t-lg p-2">
+            الأكثر شيوعا
+          </h4>
+          <h2 class="sizing text-[#1e1e1e]">البلاتيني</h2>
+          <h3 class="text-[#1e1e1e]">40 ريال</h3>
+          <p class="text-[#1e1e1e]">تذكرة 7 ايام</p>
+          <a href="" class="bg-[#6fd44f] p-3 rounded-xl mb-4"
+            ><i class="card-icon fa-solid fa-credit-card "></i> &nbsp;الاشتراك</a
+          >
+        </div>
+        <!-- Diamond -->
+        <div
+          class="planTrips bg-[#1e1e1e] text-center relative rounded-lg shadow-2xl cursor-pointer hover:scale-110 duration-500 opacity-95 hover:opacity-100"
+        >
+          <h2 class="text-[#7dfb50]">الماسي</h2>
+          <h3 class="text-[#7dfb50]">140 ريال</h3>
+          <p class="text-[#7dfb50]">تذكرة 30 يوم</p>
+          <a href="" class="bg-[#1e1e1e] p-3 rounded-xl mb-4"
+            ><i class="card-icon fa-solid fa-credit-card "></i> &nbsp;الاشتراك</a
+          >
+        </div>
+      </section>
+      <!-- Footer -->
+      <!-- <footer>
+  <div class="container1">
+    <div class="footer-content">
+      <h3 class="h33">Contact Us</h3>
+      <p>Email:riyadhbussa@gmail.com</p>
+      <p>Phone:+966 500 434 690</p>
+    </div>
+    <div class="footer-content">
+      <h3 class="h33">Quick Links</h3>
+      <ul class="list">
+        <li><a href="">Home</a></l1>
+          <li><a href="">About</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Products</a></11>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div> -->
+    </main>
+    <div id="footer"></div>
+  </body>
+</html>
+
+<script>
+  fetch("../nav/index.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("Navbar").innerHTML = data;
+    });
+</script>
+
+<script>
+  fetch("../footer/index.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var dropdownItem = document.querySelector('.card-icon');
+        var dropdown = document.querySelector('.dropdown');
+    
+        dropdownItem.addEventListener('mouseenter', function (e) {
+            dropdown.classList.add('dropdown-show');
+        });
+        dropdownItem.addEventListener('mouseleave', function () {
+            dropdown.classList.remove('dropdown-show');
+        })
+    
+    })
+</script>

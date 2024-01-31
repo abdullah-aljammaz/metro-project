@@ -1,0 +1,66 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* nav styling */
+nav{
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	height: 60px;
+	position: static;
+}
+
+
+/* Image section
+Class -> footer-logo
+*/
+.footer-logo img{
+	width: 140px;
+	cursor: pointer;
+}
+.footer-logo{
+	margin-top: 1%;
+	margin-right: 1%;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+/* End image section */
+
+
+/* Links List Section
+Class -> links-section
+*/
+.links-section{
+	display: flex;
+	text-align: center;
+	white-space: nowrap;
+	align-items: center;
+	gap: 7%;
+}
+.links-section li{
+	cursor: pointer;
+}
+
+/* End Links List Section */
+
+
+/* Buttons section 
+Class ->  buttons-section
+*/
+.buttons-section{
+	position: absolute;
+	left: 0;
+	margin-left:1%
+}
+
+/* End Buttons section */
+
+
+/* end nav styling */
+
