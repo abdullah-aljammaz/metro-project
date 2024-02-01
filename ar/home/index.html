@@ -84,21 +84,21 @@
               <div class="carousel-item active">
                 <img
                   src="../../images/KAFD_Metro_Station_Exterior.jpg"
-                  class="d-block w-100 rounded-2xl"
+                  class="d-block w-auto h-auto rounded-2xl"
                   alt="..."
                 />
               </div>
               <div class="carousel-item">
                 <img
-                  src="../../images/KAFD_Metro_Station_Exterior.jpg"
-                  class="d-block w-100 rounded-2xl"
+                  src="../../images/riyadh-metro-inverted.png"
+                  class="d-block w-auto h-auto rounded-2xl"
                   alt="..."
                 />
               </div>
               <div class="carousel-item">
                 <img
-                  src="../../images/KAFD_Metro_Station_Exterior.jpg"
-                  class="d-block w-100 rounded-2xl"
+                  src="../../images/tn_sa-riyadh_alstom_metro_train_2_ryszard_piech.jpg"
+                  class="d-block w-auto h-auto rounded-2xl"
                   alt="..."
                 />
               </div>
@@ -133,29 +133,54 @@
       <!-- slide buttons -->
       <div
         id="slide-bottom"
-        class="flex items-center justify-center gap-4 overflow-x-hidden w-full ml-0 pl-0"
+        class="flex items-center justify-center gap-10 overflow-x-hidden w-full ml-0 pl-0"
       >
         <!-- Card -->
-        <div class="flex text-white relative card-main" onclick="$goUrl">
-          <!-- Right Section -->
-          <div
+        <div class="flex text-white relative card-main">
+          <a href="../routes/" class="flex relative">
+
+            <!-- Right Section -->
+            <div
             class="right-section bg-[#113108] text-white rounded-r-2xl h-14 w-20 relative cursor-pointer"
           >
-            <h5 class="absolute top-4 right-4 font-semibold font-[Tajawal]">رحلة 13</h5>
+            <h5 class="absolute top-4 right-4 font-semibold font-[Tajawal]">رحلة 14</h5>
           </div>
           <!-- Left Section -->
           <div
             class="left-section rounded-l-2xl bg-white text-black relative cursor-pointer w-60 whitespace-nowrap"
           >
-            <h6 class="relative top-[30%] w-32 right-2 font-medium">
-              <i class="fa-solid fa-clock relative"></i>&nbsp;15:23 | مدينة
-              الملك فهد المالية
+            <h6 class="relative top-[30%] w-32 right-2 font-medium font-[Tajawal]">
+              <i class="fa-solid fa-clock relative"></i>&nbsp;5:48 | جامعة الاميرة نورة A5
             </h6>
           </div>
           <!-- Black dot Between the cards -->
           <span
             class="black-dot relative bg-black rounded-full w-4 h-4 top-5 right-10"
           ></span>
+        </a>
+        </div>
+        <!-- End The Card -->
+
+        <!-- Card -->
+        <div class="flex text-white relative card-main" >
+          <a href="../routes/" class="flex relative">
+
+          <!-- Right Section -->
+          <div
+          class="right-section bg-[#113108] text-white rounded-r-2xl h-14 w-20 relative cursor-pointer"
+          >
+          <h5 class="absolute top-4 right-4 font-semibold font-[Tajawal]">رحلة 13</h5>
+        </div>
+          <!-- Left Section -->
+          <div
+            class="left-section rounded-l-2xl bg-white text-black relative cursor-pointer w-64 max-w-80 whitespace-nowrap"
+          >
+            <h6 class="relative top-[30%]  right-2 font-medium font-[Tajawal] whitespace-nowrap">
+              <i class="fa-solid fa-clock"></i>&nbsp;15:23 | مدينة
+              الملك فهد المالية
+            </h6>
+          </div>
+          </a>
         </div>
         <!-- End The Card -->
       </div>
@@ -191,8 +216,8 @@
     card.addEventListener("mouseenter", pauseAnimation);
     card.addEventListener("mouseleave", resumeAnimation);
   });
-  function $goUrl() {
-    window.location.href = "../routes";
+  function goUrl() {
+    console.log("test")
   }
 </script>
 
