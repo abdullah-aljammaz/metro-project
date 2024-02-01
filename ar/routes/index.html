@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>riyadh metro - riyadhmetro.sa</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- alpinejs -->
@@ -22,7 +23,20 @@
       crossorigin="anonymous"
     ></script>
     <!-- font -->
-
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almarai&display=swap"
+      rel="stylesheet"
+    />
+    <!-- --- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Fontawsome -->
     <link
       rel="stylesheet"
@@ -37,9 +51,6 @@
         transition-property: all; /* Only animate the max-height property */
         overflow: hidden;
         max-height: 0; /* Start with a max-height of 0 */
-      }
-      .details-open {
-        max-height: 500px; /* Adjust as necessary to accommodate the content's actual height */
       }
     </style>
   </head>
@@ -64,7 +75,7 @@
       <section class="flex gap-5 flex-wrap">
         <!-- Container for the card -->
         <div
-          class="w-[90%] mx-auto cursor-pointer card mb-10"
+          class="w-[90%] mx-auto cursor-pointer card mb-10 h-100"
           onclick="toggleDetails(this)"
         >
           <!-- The card -->
@@ -73,7 +84,7 @@
             id="13"
           >
             <!-- Card header -->
-            <div class="p-4 flex justify-between items-center">
+            <div class="p-4 flex justify-between items-center h-28">
               <span class="text-green-500"
                 ><img src="../../images/bus-icon.png" alt=""
               /></span>
@@ -91,7 +102,7 @@
               </div>
               <button class="text-red-500 bg-transparent">
                 <span
-                  class="text-3xl absolute left-56 opacity-20 text-black bg-black h-16 w-[2px] hidden md:block"
+                  class="text-3xl absolute left-48 opacity-20 text-black bg-black h-16 w-[2px] hidden md:block top-6 duration-1000 transition-all"
                 >
                 </span>
                 <!-- Rotate icon using CSS classes -->
@@ -112,17 +123,136 @@
               </button>
             </div>
             <!-- Hidden Details -->
-            <div class="details p-4 text-sm text-gray-600 cursor-default">
-              <!-- Your expandable content here -->
+            <div
+              class="details p-4 text-sm text-gray-600 cursor-default hidden duration-300 transition-all max-h-0 justify-between items-center"
+            >
               <br />
               <a
                 href="https://www.google.com/maps/place/King+Abdullah+Economic+City+Train+Station/@22.4214394,39.1873939,17z/data=!4m14!1m7!3m6!1s0x15c0fb76a05d0f57:0x641c83cd2769b3db!2sKing+Abdullah+Economic+City+Train+Station!8m2!3d22.4214345!4d39.1899688!16s%2Fg%2F11rsdmg0c1!3m5!1s0x15c0fb76a05d0f57:0x641c83cd2769b3db!8m2!3d22.4214345!4d39.1899688!16s%2Fg%2F11rsdmg0c1?entry=ttu"
                 target="_blank"
-                class="font-semibold"
+                class="font-semibold flex-1 p-6 text-2xl opacity-70 hover:opacity-100 duration-200"
                 ><i class="fa-solid fa-location-pin"></i
                 >&nbsp;&nbsp;&nbsp;الموقع</a
               >
               <!-- ... more content ... -->
+              <div class="flex-1 flex flex-col h-32 relative justify-start mb-5">
+                <span class="font-bold text-xl relative mb-16">المحطات</span>
+                <div
+                  class="absolute block w-[2px] h-16 bg-red-600 top-16 right-9"
+                ></div>
+                <div class="relative bottom-10 right-[31.5px] text-black text-lg">
+                  <i
+                    class="fa-solid fa-circle fa-2xs"
+                    style="color: #df0101"
+                  ></i>
+                  &nbsp; محطة الملك خالد
+                </div>
+                <div class="relative bottom-10 right-[31.5px] text-black text-lg">
+                  <i
+                    class="fa-solid fa-circle fa-2xs"
+                    style="color: #df0101"
+                  ></i>
+                  &nbsp; محطة جامعة الاميرة نورة
+                </div>
+                <div class="relative bottom-10 right-[31.5px] text-black text-lg">
+                  <i
+                    class="fa-solid fa-circle fa-2xs"
+                    style="color: #df0101"
+                  ></i>
+                  &nbsp; محطة  الملك فيصل
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-[90%] mx-auto cursor-pointer card mb-10 h-100"
+          onclick="toggleDetails(this)"
+        >
+          <!-- The card -->
+          <div
+            class="bg-white shadow-md rounded-lg overflow-hidden relative"
+            id="14"
+          >
+            <!-- Card header -->
+            <div class="p-4 flex justify-between items-center h-28">
+              <span class="text-green-500"
+                ><img src="../../images/bus-icon.png" alt=""
+              /></span>
+              <div
+                class="bg-red-600 w-20 h-10 rounded-3xl relative bottom-0 left-20 shadow-2xl"
+              >
+                <span class="text-white font-medium text-2xl relative right-7"
+                  >14</span
+                >
+              </div>
+              <div>
+                <div class="text-gray-900 font-bold md:text-2xl text-base">
+                  محطة قطار جامعة الاميرة نورة - شارع انس بن مالك
+                </div>
+              </div>
+              <button class="text-red-500 bg-transparent">
+                <span
+                  class="text-3xl absolute left-48 opacity-20 text-black bg-black h-16 w-[2px] hidden md:block top-6 duration-1000 transition-all"
+                >
+                </span>
+                <!-- Rotate icon using CSS classes -->
+                <div
+                  class="icon left-10 top-5 relative transition-all duration-200"
+                >
+                  <span class="block relative w-6 h-6 rounded-full">
+                    <span
+                      class="absolute inset-0 block w-4 h-0.5 right-1 top-3 rotate-180"
+                    >
+                      <i
+                        class="icons fa-solid fa-angle-up transition-all duration-500"
+                        style="color: #63e6be"
+                      ></i>
+                    </span>
+                  </span>
+                </div>
+              </button>
+            </div>
+            <!-- Hidden Details -->
+            <div
+              class="details p-4 text-sm text-gray-600 cursor-default hidden duration-300 transition-all max-h-0 justify-between items-center"
+            >
+              <br />
+              <a
+                href="https://www.google.com/maps/place/King+Abdullah+Economic+City+Train+Station/@22.4214394,39.1873939,17z/data=!4m14!1m7!3m6!1s0x15c0fb76a05d0f57:0x641c83cd2769b3db!2sKing+Abdullah+Economic+City+Train+Station!8m2!3d22.4214345!4d39.1899688!16s%2Fg%2F11rsdmg0c1!3m5!1s0x15c0fb76a05d0f57:0x641c83cd2769b3db!8m2!3d22.4214345!4d39.1899688!16s%2Fg%2F11rsdmg0c1?entry=ttu"
+                target="_blank"
+                class="font-semibold flex-1 p-6 text-2xl opacity-70 hover:opacity-100 duration-200"
+                ><i class="fa-solid fa-location-pin"></i
+                >&nbsp;&nbsp;&nbsp;الموقع</a
+              >
+              <!-- ... more content ... -->
+              <div class="flex-1 flex flex-col h-32 relative justify-start mb-5">
+                <span class="font-bold text-xl relative mb-16">المحطات</span>
+                <div
+                  class="absolute block w-[2px] h-16 bg-red-600 top-16 right-9"
+                ></div>
+                <div class="relative bottom-10 right-[31.5px] text-black text-lg">
+                  <i
+                    class="fa-solid fa-circle fa-2xs"
+                    style="color: #df0101"
+                  ></i>
+                  &nbsp; محطة الملك خالد
+                </div>
+                <div class="relative bottom-10 right-[31.5px] text-black text-lg">
+                  <i
+                    class="fa-solid fa-circle fa-2xs"
+                    style="color: #df0101"
+                  ></i>
+                  &nbsp; محطه مدينة الملك عبدالله
+                </div>
+                <div class="relative bottom-10 right-[31.5px] text-black text-lg">
+                  <i
+                    class="fa-solid fa-circle fa-2xs"
+                    style="color: #df0101"
+                  ></i>
+                  &nbsp; محطة  الملك فيصل
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -133,12 +263,14 @@
 
     <script>
       function toggleDetails(card) {
-        const details = card.querySelector(".details");
+        let details = card.querySelector(".details");
         // const icon = card.querySelector(".icon"); // Assuming your icon has a class of 'icon'
         const $icon = card.querySelector(".icons"); // Assuming your icon has a class of 'icon'
 
         // Toggle the 'details-open' class to show or hide the details
-        details.classList.toggle("details-open");
+        details.classList.toggle("max-h-96");
+        details.classList.toggle("hidden");
+        details.classList.toggle("flex");
 
         // Toggle rotation of the icon
         // Make sure you have the appropriate CSS for the '.rotate-180' class
